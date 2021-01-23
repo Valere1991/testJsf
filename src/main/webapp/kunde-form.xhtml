@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:p="http://primefaces.org/ui">
+<ui:composition template="layout.xhtml">
+    <ui:define name="content">
+        <h:form id="kundeForm">
+            <p:panel header="Kundenmanagement">
+                <h:panelGrid columns="1">
+                	<p:outputLabel for="id" value="KD_Id: " />
+                    <p:inputText id="id" value="#{registerBean.id}" />
+                
+                    <p:outputLabel for="vorname" value="Vorname: " />
+                    <p:inputText id="vorname" value="#{registerBean.vorname}" />
+                    
+                    <p:outputLabel for="name" value="Name: " />
+                    <p:inputText id="name" value="#{registerBean.name}" />
+                    
+                    <p:outputLabel for="str" value="Straße, Nr.: " />
+                    <p:inputText id="str" value="#{registerBean.str}" />
+                    
+                    <p:outputLabel for="plz" value="PLZ: " />
+                    <p:inputText id="plz" value="#{registerBean.plz}" />
+                    
+                    <p:outputLabel for="stadt" value="Stadt: " />
+                    <p:inputText id="stadt" value="#{registerBean.stadt}" />
+                    
+                    
+                    
+                    <h:commandButton value="Anlegen" action="#{registerBean.showNewKundePage}" />
+                </h:panelGrid>
+            </p:panel>
+        </h:form>
+    </ui:define>
+</ui:composition>
+</html>
